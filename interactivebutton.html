@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Link</title>
+    <style>
+        /* Container for the image link */
+        .image-link-container {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px; /* Optional: Adds rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+            transition: transform 0.3s ease; /* Smooth scale effect */
+        }
+
+        /* The image itself */
+        .image-link-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease; /* Smooth zoom effect */
+        }
+
+        /* The hover effect on the container */
+        .image-link-container:hover {
+            transform: scale(1.05); /* Slightly scales up the image */
+        }
+
+        /* The hover effect on the image */
+        .image-link-container:hover img {
+            transform: scale(1.1); /* Slightly zooms in the image */
+        }
+
+        /* Optional: Add an overlay with text */
+        .overlay-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.2em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Show the overlay text on hover */
+        .image-link-container:hover .overlay-text {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://example.com" class="image-link-container">
+        <img src="your-image.jpg" alt="Description of the image">
+        <div class="overlay-text">Click Here</div>
+    </a>
+
+</body>
+</html>
