@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#101a23] dark group/design-root overflow-x-hidden" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#223649] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_330)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_330"><rect width="48" height="48" fill="white"></rect></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">James's Portfolio</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+            
+              <a class="text-white text-sm font-medium leading-normal" href="Resume (1).pdf">Resume</a>
+              <a class="text-white text-sm font-medium leading-normal" href="https://pi128.github.io/blog-of-james/blog.html" target="_blank">Blog</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#contact">Contact</a>
+            </div>
+            <div
+            #! this is the top right profile pick
+            class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+            style='background-image: url("image/profi.jpg");'
+          ></div>
+          </div>
+        </header>
+        <div class="gap-1 px-6 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-80">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("image/sunset.png");'
+                >
+                  <div class="flex flex-col gap-2 text-left">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Hi, I'm James
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                        I am a third-year Computer Science student at KSU who loves building automation tools, AI agents, and exploring cybersecurity through pen testing. Currently interning at ManWe, with past experience at Trax RFID.
+
+                    </h2>
+                  </div>
+                  <a
+                  href="https://github.com/pi128"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#0b72da] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                >
+                  <span class="truncate">View My Work</span>
+                </a>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Key Skills</h2>
+            <div class="flex gap-3 p-3 flex-wrap pr-4">
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#223649] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">UI/UX Design</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#223649] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">RFID</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#223649] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">AI Agents</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#223649] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">Web Development</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#223649] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">DataBase Systems </p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-[#223649] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">Mobile apps</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured Projects</h2>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUkiFVp801ZP5nyAvq54J_4E0BbPT005lQP7B7I3Wo_T6n0aM5jrPnxWAvf8gmF19Gtf-3qDuRjZvimca4Ajj4hHW9hc3Q8iHpRl-698_dpEiiq-bWUzXFf60aNK3T5Q3xBgiImRYwLtCc3_REhB3lTr_l7YECBy5-74Uq4TLvSksyHTpdOexZJaZ0crVX1DOwANgHu-E_nxO4f_XUni0xsOMZRAQUvI-MI5VSUX3pGCuvx4Lg5LL2B4wMS4oxDK9s_hClMP4CcpM");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Mobile App for Fitness Tracking</p>
+                    <p class="text-[#90adcb] text-sm font-normal leading-normal">A fitness app designed to help users track their workouts and progress.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjCynkBdp91ydv0jGXlOKCFk3BKHJeTCkX_okwr6fL1kmklobFuVZwtnQGCUG0I8QPXKJGomRQTWb5Zw00JwKTYQSQhVLY9Em2DULt7qOgKDwMdA718pT2XvSC0_oLu9roazh1KN_cFmDPDuP8E1Kt6vzsZ4cLvCWC-0Zil05ScoMK_1XwoQXIxY1s9O0CvrGSHahI8WKee8B1xia-ig1AH-C81qnUdZJkxb-uTH5-VQ2PakJ13qOskNubxowRiS_aXcTgBS20aO4");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">E-commerce Website Redesign</p>
+                    <p class="text-[#90adcb] text-sm font-normal leading-normal">A complete redesign of an e-commerce platform to improve user experience and conversion rates.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATufzhUO-Utv__gDXiZ8D6ba1WW40HPsTsCCKO0UZ7TAQ1bEWifZ1DvizyciKdswobKpHK-ayMsQBgRk9WKju2Utot5GEodpcfPc9NBGSVXcKNLyDzfDRkoGOI9wCnXPWWMtNo-W6uc9q0U1rb-T6AosMMORWovsFokc4JG58tsMwbTUNCt1FDgUdV1gI28UIyNMTjJwhVbYajgIiniYjyzoob5Vkb3p11eO8jILgRVTIjecB81KBGwf-5TigWTdFzlBPqqb0S_k8");'
+                  ></div>
+                  <div>
+                    <p class="text-white text-base font-medium leading-normal">Dashboard for Data Analysis</p>
+                    <p class="text-[#90adcb] text-sm font-normal leading-normal">A dashboard application for visualizing and analyzing large datasets.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <section id="contact" class="px-10 py-20 text-blue-400">
+        <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+        <p>
+          Email:
+          <a href="mailto:jameswidner2@gmail.com" class="text-blue-400 hover:underline">
+            jameswidner2@gmail.com
+          </a>
+        </p>
+        <p>
+          Phone:
+          <a href="tel:+16789779921" class="text-blue-400 hover:underline">
+            (678) 977-9921
+          </a>
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/pi128" target="_blank" class="text-blue-400 hover:underline">
+            github.com/pi128
+          </a>
+        </p>
+      </section>
+  </body>
+  
+</html>
