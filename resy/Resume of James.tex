@@ -1,0 +1,218 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake
+% % License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=MidnightBlue,  % nice subtle blue
+  linkcolor=black,
+  citecolor=black
+}
+
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape James Widner} \\ \vspace{1pt}
+    \small 678-977-9921 $|$ 
+    \href{mailto:jameswidner2@gmail.com}{jameswidner2@gmail.com} $|$
+    \href{https://github.com/pi128}{github.com/pi128} $|$
+     \href{https://pi128.github.io/blog-of-james/portfolio.html}{Portfolio}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Kennesaw State University}{Marietta, GA}
+      {B.S. in Computer Science,}{Aug. 2023 -- May 2026}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Software Engineering Intern}{Summer 2024}
+  {\href{https://traxrfid.com/}{\textcolor{black}{Trax RFID}}}{Alpharetta, GA}
+\resumeItemListStart
+  \resumeItem{Contributed to an RFID tracking platform using \textbf{UHF RFID} to monitor car inventory across factory lots.}
+  \resumeItem{Implemented front-end features and UI components, integrating with backend APIs to support real-time asset visibility.}
+  \resumeItem{Collaborated in a fast-paced startup team, gaining experience in rapid prototyping and iteration.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Software Engineering Intern}{Summer 2025}
+  {\href{https://manwe-io.github.io/}{\textcolor{black}{Manwe (Cybersecurity Consulting Firm)}}}{Canton, GA}
+\resumeItemListStart
+  \resumeItem{Conducted basic penetration testing and stress testing on client systems to identify vulnerabilities and performance bottlenecks.}
+  \resumeItem{Assisted with bug fixes, wrote unit tests, and contributed to improving code quality through reviews and daily standups.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {\textbf{Bulletin Generator} $|$ \emph{Python, SQLite, Docker, docx templating, JavaScript}}
+  {Jun. 2025 -- Aug. 2025}
+\resumeItemListStart
+  \resumeItem{Automated weekly Anglican bulletins by dynamically populating \textbf{.docx templates} with lectionary readings, psalms, hymns, and prayers from the 1928 BCP.}
+  \resumeItem{Built a \textbf{SQLite database} keyed to liturgical dates to fetch the appointed texts.}
+  \resumeItem{Added template hot-swapping, enabling users to switch bulletin layouts or add custom sections without code changes.}
+  \resumeItem{Packaged as a Slack bot with a setup wizard for deployment on a QNAP NAS server.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+  {\textbf{\href{https://cr8ova.com}{\textcolor{black}{Cr8ova — Music Creator Platform}}} $|$ \emph{React, Node.js, PostgreSQL, REST APIs}}
+  {May 2025 -- Present}
+\resumeItemListStart
+  \resumeItem{Developed a platform for artists to share content, connect with other creators.}
+  \resumeItem{Implemented authentication, content upload, and social features using \textbf{React} and \textbf{Node.js}.}
+  \resumeItem{Built responsive UI and backend APIs supporting media streaming and community interaction.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Other Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Bike Shop Technician}{Mar. 2025 - Jul. 2025}
+  {Cartersville Bike Shop}{Cartersville, GA}
+\resumeItemListStart
+  \resumeItem{Performed tune-ups, repairs, and full builds of customer bicycles, ensuring safety and quality.}
+  \resumeItem{Delivered customer service and product recommendations, balancing technical expertise with client needs.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Lifeguard}{2022 -- 2023}
+  {Cherokee Aquatic Centre}{Canton, GA}
+  
+\resumeItemListStart
+    \resumeItem{Monitored pool area to prevent accidents and ensure patron safety.}
+    \resumeItem{Assisted with pool maintenance, including water pH testing and cleaning.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Go, Java, C#, Python, SQL, JavaScript} \\
+     \textbf{Frameworks}{: WebAssembly (WASM), React, Node.js} \\
+     \textbf{Developer Tools}{: Git, Docker, VS Code, Visual Studio, Vim, IntelliJ, Android Studio} \\
+     \textbf{Libraries}{: pandas, NumPy, Matplotlib, Flask, Express.js}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
