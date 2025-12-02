@@ -1,126 +1,302 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Port of James - Reading Log</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
-<html lang ="en">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans:wght@400;500;700;900&amp;family=Work+Sans:wght@400;500;700;900"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="James Widner">
-    <meta name="description" content="This page will contain all the things I am learning in HTML ">
-    <title>Blog of James</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
 
-    <link rel="icon" href="image/html5.png"  type="image/png">
- 
-    <link rel="stylesheet" href="main.css" type="text/css">
+  <body
+    class="bg-[#101a23]"
+    style='font-family: "Work Sans", "Noto Sans", sans-serif;'
+  >
+    <div class="flex flex-col min-h-screen">
+      <!-- HEADER -->
+      <header
+        class="flex items-center justify-between border-b border-[#223649] px-10 py-3"
+      >
+        <div class="text-white text-lg font-semibold tracking-tight">
+          Perceptra Comentera
+        </div>
 
-</head>
+        <div class="flex items-center gap-6">
+          <a href="index.html" class="text-white text-sm font-medium">Home</a>
 
-<body>
+          <div
+            class="bg-center bg-cover rounded-full size-10"
+            style='background-image: url("image/profi.jpg");'
+          ></div>
+        </div>
+      </header>
 
-<main> 
+      <!-- INTRO SENTENCE -->
+      <section class="px-10 pt-6 pb-2">
+        <p class="text-[#90adcb] text-base sm:text-lg leading-relaxed max-w-3xl">
+          I am not really sure if this is for me or others yet but its gonna be
+          my outward thoughts on the things I consume.
+        </p>
 
-    <h1>Hello World!</h1>
+        <div class="mt-4 text-xs text-[#90adcb]">
+          Last updated:
+          <span id="last-updated-span" class="font-medium text-white"></span>
+        </div>
+      </section>
 
-    <hr>
+      <!-- ENTRIES -->
+      <main class="px-10 pb-16 pt-4 flex-1">
+        <div class="max-w-5xl space-y-4">
+          <!-- ENTRY 1 -->
+          <div
+            class="entry-card group rounded-xl border border-[#223649] bg-[#0f1923] hover:bg-[#162334]
+                      transition-colors cursor-pointer overflow-hidden"
+            data-last-edited="2025-12-2"
+          >
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div class="sm:w-48 md:w-56 bg-[#1a2b3a] aspect-[16/9]">
+                <img
+                  src="openCircuits.png"
+                  alt="Book cover"
+                  class="w-full h-full object-cover"
+                />
+              </div>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="#wants"> My ambitions</a>
-            </li>
-            <li>
-                <a href="#studies"> My studies</a>
-            </li>
-        </ul>
-    </nav>
+              <div class="flex-1 p-4 sm:py-4 sm:pr-5">
+                <p class="text-white text-lg font-semibold mb-1">
+                  Open Circuits
+                </p>
 
-    <hr>
-    
-    <h2>I am ready to learn HTML</h2>
+                <!-- TAGS -->
+                <div class="flex flex-wrap gap-2 mb-2">
+                  <!-- type: article/book/movie -->
+                  <span
+                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37] px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
+                  >
+                    Book
+                  </span>
+                  <!-- vibe: entertainment/academic/middle -->
+                  <span
+                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37] px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
+                  >
+                    Middle Zone
+                  </span>
+                </div>
 
-    <img src="image/html_logo_300x300.png" alt="HTML5 logo" width="300" height="300">
+                <p class="text-xs text-[#90adcb] mb-2">
+                  Last edited:
+                  <span class="entry-last-edited text-white font-medium"></span>
+                </p>
 
+                <p
+                  class="entry-description text-sm text-[#c3d4e8] leading-relaxed line-clamp-3"
+                >
+                  I saw this book at DEFCON and fittingly pirated it. Its
+                  what I would think of more as entertainment you shouldnt be
+                  learning like really new concepts but you will get multiple
+                  instaces of that is a really cool way to do that. I will give
+                  two expamples at the start when they talked about wipers being
+                  used to shorten the coil and thats how nobs work, and much
+                  farther into it like page 200 after explaining how gauges are
+                  made its dedicated like one page but phone cameras using the
+                  same elctiric frequency agaisnt a magnet or spring to focus a
+                  camera. So cool just stuff you genuinely didnt think would be
+                  put together that way.
+                </p>
 
+                <button
+                  type="button"
+                  class="entry-toggle mt-2 text-xs text-[#90adcb] underline"
+                >
+                  Read more
+                </button>
+              </div>
+            </div>
+          </div>
 
-    <p>This is my first web page.</p>
+          <!-- ENTRY 2 -->
+          <div
+            class="entry-card group rounded-xl border border-[#223649] bg-[#0f1923] hover:bg-[#162334]
+                      transition-colors cursor-pointer overflow-hidden"
+            data-last-edited="2025-11-15"
+          >
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div class="sm:w-48 md:w-56 bg-[#1a2b3a] aspect-[16/9]">
+                <img
+                  src="image/sample-video.png"
+                  alt="Video thumbnail"
+                  class="w-full h-full object-cover"
+                />
+              </div>
 
-    <h3 >My daily Schedule</h3>
+              <div class="flex-1 p-4 sm:py-4 sm:pr-5">
+                <p class="text-white text-lg font-semibold mb-1">
+                  Talk: Building Offensive Security Tooling in Go
+                </p>
 
-    <p>Let me tell you how I:</p>
-        <ol>
+                <!-- TAGS -->
+                <div class="flex flex-wrap gap-2 mb-2">
+                  <span
+                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37] px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
+                  >
+                    Talk
+                  </span>
+                  <span
+                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37] px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
+                  >
+                    Middle Zone
+                  </span>
+                </div>
 
-        <li>I learned to code</li>
-        <li>I learned to bowl</li>
-        <li>
-            <figure>
-                <img src="image/Pngtree_sporting_goods_bowling_illustration_4503280.png" alt="Bowling image" width="100" loading="lazy">
-                    " alt="Bowling image" width="100" loading="lazy">
-                <figcaption>
-                    bowling ball with pins 
-                </figcaption>
-            </figure>
-        </li>
-       <li>I learned to swim</li>
-       <li>I use from <abbr title="Mozilla Developer Network">
-        <a href="https://developer.mozilla.org/en-US/">MDN</a>
+                <p class="text-xs text-[#90adcb] mb-2">
+                  Last edited:
+                  <span class="entry-last-edited text-white font-medium"></span>
+                </p>
 
-       </abbr></li>
+                <p
+                  class="entry-description text-sm text-[#c3d4e8] leading-relaxed line-clamp-3"
+                >
+                  Notes on writing compact pentest utilities in Go...
+                </p>
 
-        </ol>
+                <button
+                  type="button"
+                  class="entry-toggle mt-2 text-xs text-[#90adcb] underline"
+                >
+                  Read more
+                </button>
+              </div>
+            </div>
+          </div>
 
-    <hr>
+          <!-- ENTRY 3 -->
+          <div
+            class="entry-card group rounded-xl border border-[#223649] bg-[#0f1923] hover:bg-[#162334]
+                      transition-colors cursor-pointer overflow-hidden"
+            data-last-edited="2025-10-27"
+          >
+            <div class="flex flex-col sm:flex-row gap-4">
+              <div
+                class="sm:w-48 md:w-56 bg-[#151f2b] flex items-center justify-center aspect-[16/9]"
+              >
+                <span class="text-xs text-[#90adcb]">No image yet</span>
+              </div>
 
-    <section id="wants">
-        <h3>I am learning as much as I can right now </h3>
-        
-    <p>I have been busy with swimming and school</p>
-    <p> I go to school at KSU</p>
-    <address>https://maps.app.goo.gl/Jjan1NBSC6kRUsHv9</address>
-    <p>I want to become <em>techy</em></p>
-    </section>
-    
-    
-  
+              <div class="flex-1 p-4 sm:py-4 sm:pr-5">
+                <p class="text-white text-lg font-semibold mb-1">
+                  Paper Notes: Cache Timing &amp; Side Channels
+                </p>
 
-    <section id="studies"> 
-    <h3>Things I want to study</h3>
+                <!-- TAGS -->
+                <div class="flex flex-wrap gap-2 mb-2">
+                  <span
+                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37] px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
+                  >
+                    Article
+                  </span>
+                  <span
+                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37] px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
+                  >
+                    Academic
+                  </span>
+                </div>
 
-    <ul>
-    <li>The <abbr title="Computer Science">CS</abbr>  course by harvard from the freeCodeCamp.</li>
-        <li> pen testing course from freeCodeCamp.</li>
-        <li>RFID hacking I want to study more about the roxmark I plan to read from ICEMAN.</li>
-        <li>
-        <aside>
-            <details>
-                <summary>
-                    Guess what a Proxmark is
-                </summary>
-                It is a RFID hacking device that is able to read and duplicate lf and hf RFID tags and if you're good enough credit cards.
-            </details>
-        </aside>
-    </li>
-        <li>HTML to build websites. I am doing that right now.</li>
-        <li>DART I am reading and working on atleast <strong>100</strong> pages a day from my book.</li>
-    </ul>
+                <p class="text-xs text-[#90adcb] mb-2">
+                  Last edited:
+                  <span class="entry-last-edited text-white font-medium"></span>
+                </p>
 
-    <h3>Things I would rather not study</h3>
-    <dl>
-        <dt>Linear Algera</dt>
-        <dd>I hear it isn't very <strong>Interesting</strong></dd>
+                <p
+                  class="entry-description text-sm text-[#c3d4e8] leading-relaxed line-clamp-3"
+                >
+                  Summary of cache timing attacks...
+                </p>
 
-        <dt><abbr title="English Composition 2">ENGL Comp 2</abbr> 
-            <dd>I hear it is alot of writing but <small>GPT</small> can always help</dd>
+                <button
+                  type="button"
+                  class="entry-toggle mt-2 text-xs text-[#90adcb] underline"
+                >
+                  Read more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
 
-    </dl>
-    </section>  
-</main>
-    
+      <!-- FOOTER -->
+      <footer
+        class="border-t border-[#223649] px-10 py-4 text-xs text-[#90adcb] flex justify-end"
+      >
+        Email:
+        <a
+          href="mailto:jameswidner2@gmail.com"
+          class="text-blue-400 hover:underline"
+        >
+          jameswidner2@gmail.com
+        </a>
+        · GitHub:
+        <a
+          href="https://github.com/pi128"
+          class="text-blue-400 hover:underline"
+          target="_blank"
+        >
+          github.com/pi128
+        </a>
+      </footer>
+    </div>
 
-   <footer>
-    <hr> 
-    &lt;&lt;&lt; &copy; <a href="about.html">James Widner</a>  &gt;&gt;&gt; 
-    <p>
-        <a href="#">Back to Top</a>
-    </p>
-    </footer>
-</body>
+    <!-- JS -->
+    <script>
+      function formatDate(d) {
+        return d.toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        });
+      }
 
+      (function () {
+        const span = document.getElementById("last-updated-span");
+        const d = new Date(document.lastModified);
+        if (span && !isNaN(d)) span.textContent = formatDate(d);
+      })();
+
+      document.querySelectorAll(".entry-card").forEach((card) => {
+        const d = new Date(card.dataset.lastEdited);
+        const span = card.querySelector(".entry-last-edited");
+        if (span && !isNaN(d)) span.textContent = formatDate(d);
+
+        const desc = card.querySelector(".entry-description");
+        const toggle = card.querySelector(".entry-toggle");
+
+        function toggleExpanded() {
+          const expanded = card.classList.toggle("expanded");
+          if (expanded) {
+            desc.classList.remove("line-clamp-3");
+            toggle.textContent = "Show less";
+          } else {
+            desc.classList.add("line-clamp-3");
+            toggle.textContent = "Read more";
+          }
+        }
+
+        card.addEventListener("click", toggleExpanded);
+        toggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleExpanded();
+        });
+      });
+    </script>
+  </body>
+</html>
