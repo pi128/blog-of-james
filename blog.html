@@ -94,7 +94,7 @@
                 </div>
 
                 <p class="text-xs text-[#90adcb] mb-2">
-                  Last edited:
+                  Created: 
                   <span class="entry-last-edited text-white font-medium"></span>
                 </p>
 
@@ -124,24 +124,30 @@
             </div>
           </div>
 
-          <!-- ENTRY 2 -->
+          <!-- ENTRY 2 – YouTube thumbnail as a link -->
           <div
             class="entry-card group rounded-xl border border-[#223649] bg-[#0f1923] hover:bg-[#162334]
                       transition-colors cursor-pointer overflow-hidden"
-            data-last-edited="2025-11-15"
+            data-last-edited="2025-12-2"
           >
             <div class="flex flex-col sm:flex-row gap-4">
-              <div class="sm:w-48 md:w-56 bg-[#1a2b3a] aspect-[16/9]">
+              <!-- Clickable thumbnail that goes to YouTube -->
+              <a
+                href="https://www.youtube.com/watch?v=fvpLTJX4_D8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="sm:w-48 md:w-56 bg-[#1a2b3a] aspect-[16/9] block overflow-hidden"
+              >
                 <img
-                  src="image/sample-video.png"
-                  alt="Video thumbnail"
-                  class="w-full h-full object-cover"
+                  src="https://img.youtube.com/vi/fvpLTJX4_D8/hqdefault.jpg"
+                  alt="YouTube thumbnail"
+                  class="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
                 />
-              </div>
+              </a>
 
               <div class="flex-1 p-4 sm:py-4 sm:pr-5">
                 <p class="text-white text-lg font-semibold mb-1">
-                  Talk: Building Offensive Security Tooling in Go
+                  Interview Hey Vsauce, Does Anything Exist?
                 </p>
 
                 <!-- TAGS -->
@@ -154,19 +160,26 @@
                   <span
                     class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37] px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
                   >
-                    Middle Zone
+                    Entertainment
                   </span>
                 </div>
 
                 <p class="text-xs text-[#90adcb] mb-2">
-                  Last edited:
+                  Created: 
                   <span class="entry-last-edited text-white font-medium"></span>
                 </p>
 
                 <p
                   class="entry-description text-sm text-[#c3d4e8] leading-relaxed line-clamp-3"
                 >
-                  Notes on writing compact pentest utilities in Go...
+                  I think as an introduction to Alex O'conner and already
+                  knowing a little bit of Vsauce I really go the max out of this
+                  talk some genuinely amazing new concpts. Mereology going into
+                  potentiality like why do we want to help kids over adults and
+                  then fundamentalism. Respectively each guy has made videos on
+                  these or has been talking about them for awhile but getting to
+                  be introduced to them from this interview was very cool im now
+                  reading galileos error for more panpsycism.
                 </p>
 
                 <button
@@ -179,72 +192,76 @@
             </div>
           </div>
 
-          <!-- ENTRY 3 -->
-          <div
+         <!-- ARTICLE ENTRY -->
+            <div
             class="entry-card group rounded-xl border border-[#223649] bg-[#0f1923] hover:bg-[#162334]
-                      transition-colors cursor-pointer overflow-hidden"
-            data-last-edited="2025-10-27"
-          >
-            <div class="flex flex-col sm:flex-row gap-4">
-              <div
-                class="sm:w-48 md:w-56 bg-[#151f2b] flex items-center justify-center aspect-[16/9]"
-              >
-                <span class="text-xs text-[#90adcb]">No image yet</span>
-              </div>
-
-              <div class="flex-1 p-4 sm:py-4 sm:pr-5">
+                    transition-colors cursor-pointer overflow-hidden"
+            data-last-edited="2025-12-2"
+            >
+            <div class="p-4 sm:p-5">
                 <p class="text-white text-lg font-semibold mb-1">
-                  Paper Notes: Cache Timing &amp; Side Channels
+                Donut math: how donut.c works
                 </p>
 
                 <!-- TAGS -->
                 <div class="flex flex-wrap gap-2 mb-2">
-                  <span
-                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37] px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
-                  >
-                    Article
-                  </span>
-                  <span
-                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37] px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
-                  >
-                    Academic
-                  </span>
+                <span
+                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37]
+                        px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
+                >Article</span>
+
+                <span
+                    class="inline-flex items-center rounded-md border border-[#223649] bg-[#1b2a37]
+                        px-2.5 py-1 text-[11px] font-medium text-[#c3d4e8]"
+                >Academic</span>
                 </div>
 
+                <!-- LINK TO ARTICLE -->
+                <a href="https://www.a1k0n.net/2011/07/20/donut-math.html" 
+                target="_blank"
+                class="text-blue-400 text-sm underline mb-3 inline-block">
+                Le article
+                </a>
+
                 <p class="text-xs text-[#90adcb] mb-2">
-                  Last edited:
-                  <span class="entry-last-edited text-white font-medium"></span>
+                Created:
+                <span class="entry-last-edited text-white font-medium"></span>
                 </p>
 
-                <p
-                  class="entry-description text-sm text-[#c3d4e8] leading-relaxed line-clamp-3"
-                >
-                  Summary of cache timing attacks...
+                <!-- DESCRIPTION -->
+                <p class="entry-description text-sm text-[#c3d4e8] leading-relaxed line-clamp-3">
+                Rasterization like this is something I want to get into eventually i feel like right now im more tied up with data communication ai and crypto. but looking at this the math for computer graphics is understandable and looks actually really fun
                 </p>
 
                 <button
-                  type="button"
-                  class="entry-toggle mt-2 text-xs text-[#90adcb] underline"
+                type="button"
+                class="entry-toggle mt-2 text-xs text-[#90adcb] underline"
                 >
-                  Read more
+                Read more
                 </button>
-              </div>
             </div>
-          </div>
+            </div>
         </div>
       </main>
 
-   <section id="contact" class="px-10 py-20 text-blue-400">
-        
+      <!-- CONTACT -->
+      <section id="contact" class="px-10 py-20 text-blue-400">
         <p>
           Email:
-          <a href="mailto:jameswidner2@gmail.com" class="text-blue-400 hover:underline">
+          <a
+            href="mailto:jameswidner2@gmail.com"
+            class="text-blue-400 hover:underline"
+          >
             jameswidner2@gmail.com
           </a>
         </p>
         <p>
           GitHub:
-          <a href="https://github.com/pi128" target="_blank" class="text-blue-400 hover:underline">
+          <a
+            href="https://github.com/pi128"
+            target="_blank"
+            class="text-blue-400 hover:underline"
+          >
             github.com/pi128
           </a>
         </p>
