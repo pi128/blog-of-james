@@ -3,18 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+      crossorigin
+    />
     <link
       rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans:wght@400;500;700;900&amp;family=Work+Sans:wght@400;500;700;900"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900"
     />
 
-    <!-- Tailwind -->
+    <!-- Tailwind (kept CDN for now) -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
 
@@ -25,7 +29,7 @@
     <div class="flex flex-col min-h-screen">
       <!-- HEADER -->
       <header
-        class="flex items-center justify-between border-b border-[#223649] px-10 py-3"
+        class="flex items-center justify-between border-b border-[#223649] px-6 sm:px-10 py-3"
       >
         <div class="text-white text-lg font-semibold tracking-tight">
           Perceptra Comentera
@@ -35,14 +39,14 @@
           <a href="index.html" class="text-white text-sm font-medium">Home</a>
 
           <div
-            class="bg-center bg-cover rounded-full size-10"
+            class="bg-center bg-cover rounded-full size-10 shrink-0"
             style='background-image: url("image/profi.jpg");'
           ></div>
         </div>
       </header>
 
       <!-- INTRO SENTENCE -->
-      <section class="px-10 pt-6 pb-2">
+      <section class="px-6 sm:px-10 pt-6 pb-2">
         <p class="text-[#90adcb] text-base sm:text-lg leading-relaxed max-w-3xl">
           I am not really sure if this is for me or others yet but its gonna be
           my outward thoughts on the things I consume.
@@ -55,12 +59,12 @@
       </section>
 
       <!-- ENTRIES -->
-      <main class="px-10 pb-16 pt-4 flex-1">
+      <main class="px-6 sm:px-10 pb-16 pt-4 flex-1">
         <div id="entries-container" class="max-w-5xl space-y-4"></div>
       </main>
 
       <!-- CONTACT -->
-      <section id="contact" class="px-10 py-20 text-blue-400">
+      <section id="contact" class="px-6 sm:px-10 py-20 text-blue-400">
         <p>
           Email:
           <a
@@ -87,10 +91,12 @@
     <template id="tpl-book">
       <div
         class="entry-card group rounded-xl border border-[#223649] bg-[#0f1923] hover:bg-[#162334]
-                transition-colors cursor-pointer overflow-hidden"
+               transition-colors cursor-pointer overflow-hidden"
       >
         <div class="flex flex-col sm:flex-row gap-4">
-          <div class="thumb sm:w-48 md:w-56 bg-[#1a2b3a] aspect-[16/9] overflow-hidden"></div>
+          <div
+            class="thumb sm:w-48 md:w-56 bg-[#1a2b3a] aspect-[16/9] overflow-hidden"
+          ></div>
 
           <div class="flex-1 p-4 sm:py-4 sm:pr-5">
             <p class="title text-white text-lg font-semibold mb-1"></p>
@@ -118,7 +124,7 @@
     <template id="tpl-youtube">
       <div
         class="entry-card group rounded-xl border border-[#223649] bg-[#0f1923] hover:bg-[#162334]
-                transition-colors cursor-pointer overflow-hidden"
+               transition-colors cursor-pointer overflow-hidden"
       >
         <div class="flex flex-col sm:flex-row gap-4">
           <a
@@ -151,7 +157,7 @@
     <template id="tpl-article">
       <div
         class="entry-card group rounded-xl border border-[#223649] bg-[#0f1923] hover:bg-[#162334]
-                transition-colors cursor-pointer overflow-hidden"
+               transition-colors cursor-pointer overflow-hidden"
       >
         <div class="p-4 sm:p-5">
           <p class="title text-white text-lg font-semibold mb-1"></p>
@@ -190,106 +196,103 @@
       }
 
       /*  ENTRIES */
-    const entries = [
-    {
-        type: "book",
-        title: "Open Circuits",
-        date: "2025-12-02",
-        img: "openCircuits.png",
-        tags: ["Book", "Middle Zone"],
-        desc: `I saw this book at DEFCON and fittingly pirated it. Its
-    what I would think of more as entertainment you shouldnt be
-    learning like really new concepts but you will get multiple
-    instaces of that is a really cool way to do that. I will give
-    two expamples at the start when they talked about wipers being
-    used to shorten the coil and thats how nobs work, and much
-    farther into it like page 200 after explaining how gauges are
-    made its dedicated like one page but phone cameras using the
-    same elctiric frequency agaisnt a magnet or spring to focus a
-    camera. So cool just stuff you genuinely didnt think would be
-    put together that way.`
-    },
+      const entries = [
+        {
+          type: "book",
+          title: "Open Circuits",
+          date: "2025-12-02",
+          img: "openCircuits.png",
+          tags: ["Book", "Middle Zone"],
+          desc: `I saw this book at DEFCON and fittingly pirated it. Its
+what I would think of more as entertainment you shouldnt be
+learning like really new concepts but you will get multiple
+instaces of that is a really cool way to do that. I will give
+two expamples at the start when they talked about wipers being
+used to shorten the coil and thats how nobs work, and much
+farther into it like page 200 after explaining how gauges are
+made its dedicated like one page but phone cameras using the
+same elctiric frequency agaisnt a magnet or spring to focus a
+camera. So cool just stuff you genuinely didnt think would be
+put together that way.`,
+        },
 
-    {
-        type: "youtube",
-        title: "Interview Hey Vsauce, Does Anything Exist?",
-        url: "https://www.youtube.com/watch?v=fvpLTJX4_D8",
-        date: "2025-12-02",
-        tags: ["Talk", "Philosophy"],
-        desc: `I think as an introduction to Alex O'conner and already
-    knowing a little bit of Vsauce I really got the max out of this
-    talk some genuinely amazing new concpts. Mereology going into
-    potentiality like why do we want to help kids over adults and
-    then fundamentalism. Respectively each guy has made videos on
-    these or has been talking about them for awhile but getting to
-    be introduced to them from this interview was very cool im now
-    reading galileos error for more panpsycism.`
-    },
+        {
+          type: "youtube",
+          title: "Interview Hey Vsauce, Does Anything Exist?",
+          url: "https://www.youtube.com/watch?v=fvpLTJX4_D8",
+          date: "2025-12-02",
+          tags: ["Talk", "Philosophy"],
+          desc: `I think as an introduction to Alex O'conner and already
+knowing a little bit of Vsauce I really got the max out of this
+talk some genuinely amazing new concpts. Mereology going into
+potentiality like why do we want to help kids over adults and
+then fundamentalism. Respectively each guy has made videos on
+these or has been talking about them for awhile but getting to
+be introduced to them from this interview was very cool im now
+reading galileos error for more panpsycism.`,
+        },
 
-    {
-        type: "article",
-        title: "Donut math: how donut.c works",
-        link: "https://www.a1k0n.net/2011/07/20/donut-math.html",
-        date: "2025-12-02",
-        tags: ["Article", "Academic"],
-        desc: `Rasterization like this is something I want to get into
-    eventually I feel like right now im more tied up with data
-    communication, ai, and crypto. but looking at this the math
-    for computer graphics is understandable and looks actually
-    really fun.`
-    },
+        {
+          type: "article",
+          title: "Donut math: how donut.c works",
+          link: "https://www.a1k0n.net/2011/07/20/donut-math.html",
+          date: "2025-12-02",
+          tags: ["Article", "Academic"],
+          desc: `Rasterization like this is something I want to get into
+eventually I feel like right now im more tied up with data
+communication, ai, and crypto. but looking at this the math
+for computer graphics is understandable and looks actually
+really fun.`,
+        },
 
-    {
-        type: "youtube",
-        title: "Modernizing a Vintage Car",
-        url: "https://www.youtube.com/watch?v=jZ38C-M3tyk",
-        date: "2025-12-03",
-        tags: ["Watched", "Entertainment"],
-        desc: `I love that the car world actually uses cad. It is cool how
-    complex an engine can be and how well someone can know it to
-    actually be able to wire it up. Chris fix it will even scan 3d
-    scan them to create accurate parts. I love the Nissan datson
-    and the mazda miata but im not sure which one is cooler im
-    leaning miata but its alittle too basic.`
-    },
+        {
+          type: "youtube",
+          title: "Modernizing a Vintage Car",
+          url: "https://www.youtube.com/watch?v=jZ38C-M3tyk",
+          date: "2025-12-03",
+          tags: ["Watched", "Entertainment"],
+          desc: `I love that the car world actually uses cad. It is cool how
+          complex an engine can be and how well someone can know it to
+          actually be able to wire it up. Chris fix it will even scan 3d
+          scan them to create accurate parts. I love the Nissan datson
+          and the mazda miata but im not sure which one is cooler im
+          leaning miata but its alittle too basic.`,
+        },
 
-     {
-        type: "article",
-        title: "Writing a good CLAUDE.md",
-        link: "https://www.humanlayer.dev/blog/writing-a-good-claude-md",
-        date: "2025-12-3",
-        tags: ["Article", "Academic"],
-        desc: `I dable in AI coding I do think it will be the future for most creations, you won't get the luxury of just saying build me something because it can only use the median you know. But if you can describe the architecture of what you want like this article is touching on then you can create anything, also I'm gonna be honest I did not know what a linter was so Biome I'll look into that later`
-    },
-      {
-        type: "article",
-        title: "Same: Automated Impersonation for All ",
-        link: "https://www.netcraft.com/blog/same-automated-impersonation-for-all",
-        date: "2025-12-5",
-        tags: ["Article", "Academic"],
-        desc: `Phaas (Phishing as a service) Is Same the company that interesting no. But it is a really cool tool, to be able to perfectly mimic a whole website to click jack it as well. I'm a little lost on the netlify going under the dns. Darcula also did some insane stuff for its size and it was selling the Phaas as a subscrition https://en.wikipedia.org/wiki/Darcula. All the articles are from a year ago so im pretty sure Darcula isn't around anymore. I am interested in model safety you can cheat on a test but the model will stop if it sees that its on respondus or something or you can be researching hacking stuff like darcula and it will have a hard cut off now you can say im just a researcher but still no instructions. Thats a top layer right could you just negatively take the weights and push is back to allowing it or does it take retraining a model fully for it not to have safties?`
-    },
-      {
+        {
+          type: "article",
+          title: "Writing a good CLAUDE.md",
+          link: "https://www.humanlayer.dev/blog/writing-a-good-claude-md",
+          date: "2025-12-03",
+          tags: ["Article", "Academic"],
+          desc: `I dable in AI coding I do think it will be the future for most creations, you won't get the luxury of just saying build me something because it can only use the median you know. But if you can describe the architecture of what you want like this article is touching on then you can create anything, also I'm gonna be honest I did not know what a linter was so Biome I'll look into that later`,
+        },
+        {
+          type: "article",
+          title: "Same: Automated Impersonation for All ",
+          link: "https://www.netcraft.com/blog/same-automated-impersonation-for-all",
+          date: "2025-12-05",
+          tags: ["Article", "Academic"],
+          desc: `Phaas (Phishing as a service) Is Same the company that interesting no. But it is a really cool tool, to be able to perfectly mimic a whole website to click jack it as well. I'm a little lost on the netlify going under the dns. Darcula also did some insane stuff for its size and it was selling the Phaas as a subscrition https://en.wikipedia.org/wiki/Darcula. All the articles are from a year ago so im pretty sure Darcula isn't around anymore. I am interested in model safety you can cheat on a test but the model will stop if it sees that its on respondus or something or you can be researching hacking stuff like darcula and it will have a hard cut off now you can say im just a researcher but still no instructions. Thats a top layer right could you just negatively take the weights and push is back to allowing it or does it take retraining a model fully for it not to have safties?`,
+        },
+        {
           type: "youtube",
           title: "I Don't Have a Good Title for This Video.",
           url: "https://www.youtube.com/watch?v=D7MW1omHUdY",
-          date: "2025-12-7",
+          date: "2025-12-07",
           tags: ["Talk", "Philosophy"],
-          desc: `Holy fuck is this good. I love perspective talks David Foster Wallace my current obsession https://www.youtube.com/watch?v=DCbGM4mqEVw&t=2s. I think I do not struggle to view my world through either a very content lens or just any small thing can be ignored because I get to lift later or watch a movie eventually. But perspective and making sure your not being negative about things doesnt actually move the bar in a positive way it kind of just resets things. I have traveled to some really amazing places for this im imagining being on top of Whistler Mountain. And again I try to put myself in the headspace isn't this awesome its so cool, but idk in the moment its just there infront of me and kind of boring yet I remeber them for years. Beauty in complexity I think thats easy I study Compsci Hank Green also said his purpose for life was beauty in complexity getting to work on something or add to a really hard and complex problem. But something thats just observed that is beautiful like the mountains how do you interpert that `
-      },
- 
-    ];
-
+          desc: `Holy fuck is this good. I love perspective talks David Foster Wallace my current obsession https://www.youtube.com/watch?v=DCbGM4mqEVw&t=2s. I think I do not struggle to view my world through either a very content lens or just any small thing can be ignored because I get to lift later or watch a movie eventually. But perspective and making sure your not being negative about things doesnt actually move the bar in a positive way it kind of just resets things. I have traveled to some really amazing places for this im imagining being on top of Whistler Mountain. And again I try to put myself in the headspace isn't this awesome its so cool, but idk in the moment its just there infront of me and kind of boring yet I remeber them for years. Beauty in complexity I think thats easy I study Compsci. Hank Green also said his purpose for life was beauty in complexity getting to work on something or add to a really hard and complex problem. But something thats just observed that is beautiful like the mountains how do you interpert that?`,
+        },
+      ];
 
       /*  ENTRY BUILDER */
       function addEntries() {
         const container = document.getElementById("entries-container");
 
         entries.forEach((entry) => {
-          const tpl =
-            document
-              .getElementById(`tpl-${entry.type}`)
-              .content.cloneNode(true);
+          const tpl = document
+            .getElementById(`tpl-${entry.type}`)
+            .content.cloneNode(true);
 
           tpl.querySelector(".title").textContent = entry.title;
           tpl.querySelector(".desc").textContent = entry.desc;
@@ -309,7 +312,7 @@
 
           if (entry.type === "book") {
             tpl.querySelector(".thumb").innerHTML = `
-              <img src="${entry.img}" class="w-full h-full object-cover" />
+              <img src="${entry.img}" loading="lazy" class="w-full h-full object-cover" alt="${entry.title}" />
             `;
           }
 
@@ -319,7 +322,7 @@
             const link = tpl.querySelector(".thumb");
             link.href = entry.url;
             link.innerHTML = `
-              <img src="${thumb}" class="w-full h-full object-cover" />
+              <img src="${thumb}" loading="lazy" class="w-full h-full object-cover" alt="${entry.title} thumbnail" />
             `;
           }
 
